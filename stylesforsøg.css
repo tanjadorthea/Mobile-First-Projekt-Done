@@ -1,0 +1,257 @@
+/* GENERELLE REGLER FOR ALLE SIDER */
+*{
+    margin:0;
+    padding:0;
+}
+
+header{
+    width:100%;
+    height:45px;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    display:flex;
+    justify-content: space-around;
+
+    position:sticky;
+    z-index: 2;
+    top:-1px;
+    background-color:#FFF5AA;
+}
+
+
+/* logo i navbaren */
+
+header > #logo{
+}
+
+
+
+/* spacing af navbaren */
+nav{
+    display: flex;
+    gap: 30px;
+    padding-left:250px;
+}
+
+/* styling af "event" i headeren om ikke skal have drop down */
+nav > a{
+    background-color:#FFF5AA;
+    color: black;
+    padding: 10px;
+    font-size: 12pt;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1pt;
+    text-decoration: none;
+}
+
+
+/* Ikoner i venstre side af headeren */
+#navikoner {
+    display: flex;
+    gap: 30px;
+}
+
+#searchnavikon, #shoppingnavikon {
+    width: 40px;
+    height: 40px;
+}
+
+
+/* dropdown styling i navbaren */
+.dropbtn {
+    background-color:#FFF5AA;
+    color: black;
+    padding: 10px;
+    font-size: 12pt;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1pt;
+  }
+  
+  /* display none, da content i dropdown skal være gemt væk når man ikke hover over det */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  /* dropdown hover  */
+
+  /* skift af baggrundfarve når man hover */
+  .dropdown-content a:hover {
+      background-color: lightgoldenrodyellow;
+    
+    }
+  /* display bliver ændret til blok, for at vise content når man hover */
+  .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+
+
+
+    /* Burger menu */
+
+#burgermenubody{
+    background-color:#FFF5AA;
+    color: black;
+}
+
+#burgermenu{
+    display:flex;
+    gap: 50px;
+    flex-direction: column;
+    align-items: center;
+    padding: 40%;
+}
+
+#burgermenunavikoner{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.burgermenunavikon{
+    width: 40px;
+    height: 40px;
+}
+
+#burgermenuexit > img{
+    width: 30px;
+    height: 30px;
+    padding: 6%;
+}
+
+#mobilemenubutton{
+    width: 50px;
+    height: 50px;
+    z-index: -1;
+}
+
+
+/* FOOTER */
+
+footer{
+    padding-top:50px;
+    min-height:300px;
+    width:100%;
+
+    background-color:#FFF5AA;
+    text-align:left;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items:stretch;
+}
+
+
+footer > div >p{
+    margin-top:20px;
+    margin-bottom:20px;
+
+    color:black;
+    text-align: center;
+    text-align: left;
+    line-height: 30px;
+    font-family: montserrat, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 10pt;
+}
+
+
+footer > div > p > a{
+    text-decoration: none;
+    color: black;
+}
+
+footer > div > p > a:hover{
+    font-weight: 300;
+}
+
+footer > .down > a > img{
+    max-height:50px;
+    padding:15px;
+}
+
+
+
+                /* MEDIA QUERIES*/          
+
+@media only screen and (min-width:769px){
+    /* header */
+   #mobilemenubutton{
+       display: none;
+   }
+
+   #logo{
+        padding-right:25%;
+        cursor:pointer;
+    }
+}
+
+@media only screen and (max-width:769px){
+    /* header */
+    #desktopmenu{
+        display: none;
+    }
+
+    /* footer */
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width:520px){
+    /* header */
+    div >#searchnavikon{
+        display: none;
+    }
+}
+
+@media only screen and (max-width:375px){
+    /* header */
+    #mobilemenubutton {
+        width: 40px;
+        height: 40px;
+    }
+
+    #navikoner{
+        gap:10px;
+    }
+}
+
+@media only screen and (min-width:320px){
+    /* header */
+    #mobilemenubutton {
+        width: 30px;
+        height: 30px;
+    }
+
+    #navikoner{
+        gap:5px;
+    }
+}
+
+
+            /* FONTS */
+
+h6{
+    font-size: 12pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

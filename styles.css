@@ -1,0 +1,709 @@
+/* GENERELLE REGLER FOR ALLE SIDER */
+*{
+    margin:0;
+    padding:0;
+}
+
+.bodygrøn{
+  background-color:#52725D;
+}
+
+.headergrøn{
+  background-color: #52725D;
+}
+
+.bodygul{
+  background-color: #FFF5AA;
+}
+
+.headergul{
+  background-color: #FFF5AA;
+}
+
+
+
+
+
+
+
+
+
+/* HEADER */
+
+header{
+  width:100%;
+  height:45px;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  display:flex;
+  justify-content: space-around;
+
+  position:sticky;
+  z-index: 2;
+  top:-1px;
+  background-color:#FFF5AA;
+}
+
+
+/* spacing af navbaren */
+nav{
+  display: flex;
+  gap: 30px;
+  padding-left:250px;
+}
+
+/* styling af "event" i headeren, som ikke skal have drop down */
+nav > a{
+  background-color:#FFF5AA;
+  color: black;
+  padding: 10px;
+  font-size: 12pt;
+  border: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1pt;
+  text-decoration: none;
+}
+
+#event_grøn{
+  background-color: #52725D;
+  color:white;
+}
+
+/* Ikoner i venstre side af headeren */
+#navikoner {
+  display: flex;
+  gap: 30px;
+}
+
+#searchnavikon, #shoppingnavikon {
+  width: 40px;
+  height: 40px;
+}
+
+
+/* dropdown styling i navbaren på de gule sider */
+.dropbtn {
+  background-color:#FFF5AA;
+  color: black;
+  padding: 10px;
+  font-size: 12pt;
+  border: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1pt;
+}
+
+/* dropdown styling i navbaren på de grønne sider */
+.dropbtn_grøn {
+  background-color:#52725D;
+  color: white;
+  padding: 10px;
+  font-size: 12pt;
+  border: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1pt;
+}
+
+/* display none, da content i dropdown skal være gemt væk når man ikke hover over det */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* skift af baggrundfarve når man hover */
+.dropdown-content a:hover {
+    background-color: lightgoldenrodyellow;
+  }
+
+/* display bliver ændret til blok, for at vise content når man hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* BURGER MENU (EKSTERN HTML SIDE) */
+
+#burgermenubody{
+  background-color:#FFF5AA;
+  color: black;
+}
+
+#burgermenu{
+  display:flex;
+  gap: 50px;
+  flex-direction: column;
+  align-items: center;
+  padding: 20%;
+}
+
+#burgermenunavikoner{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding-bottom:40px;
+}
+
+.burgermenunavikon{
+  width: 40px;
+  height: 40px;
+}
+
+#burgermenuexit > img{
+  width: 30px;
+  height: 30px;
+  padding: 6%;
+}
+
+#mobilemenubutton > img{
+  width: 40px;
+  height: 40px;
+}
+
+/* HERO SLIDESHOW*/
+
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1100px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #52725D;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color:white;
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 80pt;
+    position: absolute;
+    top:40%;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+  }
+  
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 8px;
+    width: 8px;
+    margin: 0 2px;
+    background-color: #abdcbc;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #52725D;
+  }
+  
+   /* Fade animation på slideshow*/
+   @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  .slideshow-container {
+    animation: fadeIn;
+    animation-duration: 3s;
+    animation-delay: 0s;
+  }
+
+  
+/* VISION */
+  #vision{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-top:60px;
+  }
+
+
+/* EVENTS & ÅBNINGSTIDER */
+
+  #events_åbningstider{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  
+    padding-bottom:50px;
+
+  }
+
+  #events{
+    padding-top:50px;
+    text-align: center;
+  }
+
+  #åbningstider{
+    padding-top:50px;
+    text-align: center;
+  }
+
+  #åbningstider > h2{
+    padding-bottom:20px;
+  }
+
+  #events > h2{
+    padding-bottom:20px;
+  }
+  
+  
+/* MENU KORT (EKSTERN HTML SIDE)*/
+#menukort{
+  padding-bottom:50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin:0 auto;
+}
+
+#menukort > div{
+  display: flex;
+  justify-content: center;
+}
+
+#menukort > div >h1{
+  padding-bottom:20px;
+  color:#FFF5AA;
+}
+
+#menukort > div > #menukortbillede{
+  padding-bottom:35px;
+}
+
+@keyframes fadeIn{
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+#menukort{
+  animation: fadeIn;
+  animation-duration: 3s;
+  animation-delay: 0s;
+}
+
+/* EVENTS (ESKTERN HTML SIDE)*/
+
+#eventplakat{
+  margin:0 auto;
+  padding-bottom:50px;
+}
+
+@keyframes fadeIn{
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+#eventplakat{
+  animation: fadeIn;
+  animation-duration: 3s;
+  animation-delay: 0s;
+}
+
+
+/* GALLERI (EKSTERN HTML SIDE */
+
+#galleriresponsiv{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.responsive {
+  padding: 6px;
+  float:left;
+  width: 20%;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  font-size: 8pt;
+  color:#52725D;
+  font-family:'Didact Gothic', sans-serif;
+}
+
+@keyframes fadeIn{
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+#galleriresponsiv{
+  animation: fadeIn;
+  animation-duration: 3s;
+  animation-delay: 0s;
+}
+
+
+/* MØD VORES ANSATTE (EKSTERN HTML SIDE)*/
+
+#overskrift{
+  text-align: center;
+  margin: 0 auto;
+}
+
+#ansatte{
+  display:flex;
+  flex-direction: row;
+}
+
+.billede_teaser{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.profilbillede{
+  border-radius: 50%;
+}
+
+.teaser{
+  position: relative;
+  bottom: 60px;
+  padding: 4%;
+  background-color: white;
+  z-index: -1;
+  text-align: center;
+  width: 80%;
+  border-radius: 10px;
+}
+
+.billede_teaser > .teaser > h3{
+  margin-top:60px;
+}
+
+.billede_teaser > .teaser > p{
+  margin-bottom:20px;
+}
+
+hr{
+  max-width: 20px;
+  border:solid 0.5px #52725D;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+/* fade animationer */
+
+@keyframes fadeIn{
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+#ansatte{
+  animation: fadeIn;
+  animation-duration: 3s;
+  animation-delay: 0s;
+}
+
+
+/* HISTORIEN BAG (EKSTERN HTML SIDE) */
+.flex-container {
+  display: flex;
+}
+
+.flex-container > div {
+  margin-left: 50px;
+  margin-right:50px;
+  margin-bottom:50px;
+  text-align: center;
+}
+
+.flex-container > div > #nabokioskfacade {
+    max-width: 500px;
+}
+
+.flex-container > div > p{
+  line-height: 1.5;
+  color:white;
+}
+
+.flex-container > div > h1{
+  color:#FFF5AA;
+}
+
+@keyframes fadeIn{
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+.flex-container{
+  animation: fadeIn;
+  animation-duration: 3s;
+  animation-delay: 0s;
+}
+
+
+
+/* FOOTER */
+
+ footer{
+  padding-top:50px;
+  min-height:300px;
+  width:100%;
+
+  background-color:#FFF5AA;
+  text-align:left;
+
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 1px solid #52725D ;
+}
+
+footer > div > p{
+  margin-top:20px;
+  margin-bottom:20px;
+  color:black;
+  text-align: left;
+  font-size: 10pt;
+}
+
+footer > div > p > a{
+  text-decoration: none;
+  color: black;
+}
+
+
+footer > .down > a > img{
+  max-height:50px;
+  margin-top:20px;
+}
+
+
+/* KONTAKTFORMULAR */
+
+aside{
+  display:flex;
+  flex-direction: column;
+  float:right;
+}
+
+aside > div{
+  float:right;
+  margin-right:70px;
+  padding-top:20px;
+}
+
+aside > div > p{
+  padding-bottom:20px;
+}
+
+/* Generelle regler for hele formularen */
+input[type=text], select, textarea{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 12px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing:border-box;
+  margin-top: 6px; 
+  margin-bottom: 10px; 
+  resize: vertical;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Styling af "send besked" knappen */
+input[type=submit] {
+  background-color:white;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* hover på "send knappen"*/
+input[type=submit]:hover {
+  background-color:#FFF5AA;
+}
+
+/* baggrundsfarve og padding på kontaktformularen */
+.contactcontainer {
+  border-radius: 5px;
+  background-color:#52725D;
+  padding: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 120px;
+}
+
+
+
+              /* MEDIA QUERIES*/          
+
+@media only screen and (min-width:1000px){
+  /* header */
+ #mobilemenubutton{
+     display: none;
+ }
+
+
+  /* slide show*/
+  #forsidebillede-piger, #forsidebillede-is, #forsidebillede-facade, .text {
+      width:100%;
+      height:auto;
+    }
+}
+
+@media only screen and (max-width:1000px){
+  /* header */
+  #desktopmenu{
+      display: none;
+  }
+
+
+  /* footer */
+  footer{
+      flex-direction: column;
+      align-items: center;
+  }
+
+  /* slide show*/
+  #forsidebillede-piger, #forsidebillede-is, #forsidebillede-facade, .text {
+    width:100%;
+    height:auto;
+    font-size: 40pt;
+  }
+}
+
+@media only screen and (max-width:520px){
+  /* header */
+  div >#searchnavikon{
+      display: none;
+  }
+}
+
+@media only screen and (max-width:375px){
+  /* header */
+  #mobilemenubutton {
+      width: 40px;
+      height: 40px;
+  }
+
+  #navikoner{
+      gap:10px;
+  }
+}
+
+@media only screen and (min-width:320px){
+  /* header */
+  #mobilemenubutton {
+      width: 30px;
+      height: 30px;
+  }
+
+  #navikoner{
+      gap:5px;
+  }
+}
+
+@media only screen and (max-width:1000px){
+  #events_åbningstider {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* galleri */
+
+
+
+/* mød vores ansatte */
+@media only screen and (max-width:1000px){
+  #ansatte{
+      flex-direction: column;
+  }
+}
+  
+
+
+/* FONTS */
+
+h1{
+  font-family: 'Anton', sans-serif;
+  color:#52725D;
+  font-size: 45pt;
+}
+
+h2{
+  font-size: 30pt;
+  font-family: 'Didact Gothic', sans-serif;
+  color:black;
+}
+
+h3{
+  font-size: 18pt;
+  font-family: 'Didact Gothic', sans-serif;
+  color:#52725D;
+}
+
+h4{
+  font-size: 14pt;
+  font-family: 'Didact Gothic', sans-serif;
+  color:#52725D;
+}
+
+p{
+  font-size: 10pt;
+  font-family: 'Didact Gothic', sans-serif;
+  color:#52725D;
+}
+
+a{
+  font-size: 10pt;
+  font-family: 'Didact Gothic', sans-serif;
+  color:black;
+}
+
+
+
+
+
